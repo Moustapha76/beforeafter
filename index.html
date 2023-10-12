@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before - After</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+<style>
+    .beforeAfter {
+        position: relative;
+        background: #faf3f2cf;
+        padding: 2rem 5%
+    }
+    
+    .tabs-cats {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px !important;
+        margin-bottom: 30px !important
+    }
+    
+    .ltx-before-after .ltx-ba-filter {
+        padding: 0 10% 160px
+    }
+    
+    span.cat {
+        display: inline-block;
+        margin: 10px 4px 4px
+    }
+    
+    .tabs-cats li span {
+        cursor: pointer;
+        line-height: 1em;
+        padding: 4px 0 3px;
+        margin: 0 30px;
+        display: block;
+        font-size: 20px !important;
+        transition: all .3s ease 0s;
+        color: var(--color2);
+        border-bottom: 2px dashed rgba(45, 54, 99, .1);
+        font-family: var(--font_family_3);
+        letter-spacing: 2px;
+    }
+    
+    .tabs-cats li span.cat-active {
+        color: var(--color1);
+        border-bottom: none
+    }
+    
+    .ltx-before-after .ltx-wrap {
+        padding-bottom: 125px;
+        position: relative;
+        margin: 0 12%
+    }
+    
+    .ltx-before-after .ltx-wrap .header {
+        text-align: center;
+        color: var(--color3);
+        padding-top: 50px;
+        font-size: 19px;
+        letter-spacing: 1px;
+        line-height: 1.5
+    }
+    
+    .ltx-before-after .ltx-wrap .header span {
+        display: block
+    }
+    
+    .ltx-before-after .ltx-wrap .ltx-ba-wrap {
+        border: 5px solid var(--color2);
+        position: relative;
+        background-clip: padding-box;
+        margin-top: -135px;
+        border-radius: var(--border-radius)
+    }
+    
+    .ltx-before-after .ltx-wrap .ltx-ba-wrap .item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 100% 100%
+    }
+    
+    .ltx-before-after .ltx-wrap .ltx-ba-wrap .item.before {
+        right: 50%
+    }
+    
+    .ltx-before-after .ltx-wrap .ltx-ba-wrap .handle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        left: 50%;
+        margin-left: -25px;
+        cursor: ew-resize;
+        overflow: hidden
+    }
+    
+    .ltx-before-after .ltx-wrap .ltx-ba-wrap .handle::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        left: 23px;
+        background-color: var(--color0)
+    }
+    
+    .ltx-before-after .ltx-wrap .ltx-ba-wrap .handle::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        display: inline-block;
+        font: 24px/50px FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        content: "";
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        background-clip: padding-box;
+        background-color: var(--color0)
+    }
+</style>
+
+<body>
+    <div class="beforeAfter">
+        <div class="heading-title">
+            <h1>Avant / Après<span class="titre-secondaire">Découvrez les bénéfices de nos interventions grâce aux photos avant/après de nos patients</span></h1>
+        </div>
+        <div class="ltx-before-after">
+            <ul class="cats tabs-cats ltx-ba-filter">
+                <li><span class="cat" data-filter="0">Élimination de la graisse abdominale</span></li>
+                <li><span class="cat" data-filter="1">Lésions vasculaires</span></li>
+                <li><span class="cat" data-filter="2">Relâchement cutané</span></li>
+                <li><span class="cat" data-filter="3">Traitement peaux altérées par le soleil</span></li>
+            </ul>
+            <div class="ltx-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="box">
+                            <h6 class="header">Avant <span> le traitement </span></h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="ltx-ba-wrap ltx-ba-filter-0" style="display: none;">
+                                <div class="after item" style="background-image:url(./img/a1.jpg)"></div>
+                                <div class="before item" style="background-image:url(./img/b1.jpg)"></div>
+                                <img src="./img/b1.jpg" class="ltx-ba-before" alt="Amaigrissement">
+                                <div class="handle"></div>
+                            </div>
+                            <div class="ltx-ba-wrap ltx-ba-filter-1" style="display: none;">
+                                <div class="after item" style="background-image:url(./img/a2.jpg)"></div>
+                                <div class="before item" style="background-image:url(./img/b2.jpg)"></div>
+                                <img src="./img/b2.jpg" class="ltx-ba-before" alt="Comblement de rides">
+                                <div class="handle"></div>
+                            </div>
+                            <div class="ltx-ba-wrap ltx-ba-filter-2" style="display: none;">
+                                <div class="after item" style="background-image:url(./img/a3.jpg)"></div>
+                                <div class="before item" style="background-image:url(./img/b3.jpg)"></div>
+                                <img src="./img/b3.jpg" class="ltx-ba-before" alt="Médecine esthétique">
+                                <div class="handle"></div>
+                            </div>
+                            <div class="ltx-ba-wrap ltx-ba-filter-3" style="display: none;">
+                                <div class="after item" style="background-image:url(./img/a4.jpg)"></div>
+                                <div class="before item" style="background-image:url(./img/b4.jpg)"></div>
+                                <img src="./img/b3.jpg" class="ltx-ba-before" alt="Traitement peaux altérées par le soleil">
+                                <div class="handle"></div>
+                            </div>
+
+                        </div>
+                        <div class="box">
+                            <h6 class="header">Après <span> le traitement </span></h6>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        initBeforeAfter();
+
+        jQuery(window).on('load', function() {
+
+            jQuery("#qodef-page-spinner").fadeOut(1000);
+
+            initServicesMenu();
+            // refreshServicesMenu();
+        });
+
+        function initBeforeAfter() {
+
+            if (jQuery('.ltx-before-after').length) {
+
+                var filter = jQuery('.ltx-ba-filter'),
+                    wrap = jQuery('.ltx-before-after');
+
+                filter.on('click', 'span', function() {
+
+                    var el = jQuery(this),
+                        current = el.data('filter');
+
+                    wrap.find('.ltx-ba-wrap').removeClass('active').hide();
+                    wrap.find('.ltx-ba-filter-' + current).addClass('active').show();
+                    initBeforeAfterEl(wrap.find('.ltx-ba-filter-' + current));
+
+                    filter.find('span').removeClass('cat-active');
+                    jQuery(this).addClass('cat-active');
+                });
+
+                wrap.find('.ltx-ba-filter-0').addClass('active').show();
+                initBeforeAfterEl(wrap.find('.ltx-ba-filter-0'));
+                filter.find('li:first-child span').addClass('cat-active');
+            }
+        }
+
+        function initBeforeAfterEl(el) {
+
+            var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+
+            var $container = jQuery(el),
+                $before = $container.find('.before'),
+                $after = $container.find('.after'),
+                $handle = $container.find('.handle');
+
+            var maxX = $container.outerWidth(),
+                offsetX = $container.offset().left,
+                startX = 0;
+
+            var touchstart, touchmove, touchend;
+            var mousemove = function(e) {
+                e.preventDefault();
+                var curX = e.clientX - offsetX,
+                    diff = startX - curX,
+                    curPos = (curX / maxX) * 100;
+                if (curPos > 100) {
+                    curPos = 100;
+                }
+                if (curPos < 0) {
+                    curPos = 0;
+                }
+                $before.css({
+                    right: (100 - curPos) + "%"
+                });
+                $handle.css({
+                    left: curPos + "%"
+                });
+            };
+            var mouseup = function(e) {
+                e.preventDefault();
+                if (supportsTouch) {
+                    jQuery(document).off('touchmove', touchmove);
+                    jQuery(document).off('touchend', touchend);
+                } else {
+                    jQuery(document).off('mousemove', mousemove);
+                    jQuery(document).off('mouseup', mouseup);
+                }
+            };
+            var mousedown = function(e) {
+                e.preventDefault();
+                startX = e.clientX - offsetX;
+                if (supportsTouch) {
+                    jQuery(document).on('touchmove', touchmove);
+                    jQuery(document).on('touchend', touchend);
+                } else {
+                    jQuery(document).on('mousemove', mousemove);
+                    jQuery(document).on('mouseup', mouseup);
+                }
+            };
+
+            touchstart = function(e) {
+                mousedown({
+                    preventDefault: e.preventDefault,
+                    clientX: e.originalEvent.changedTouches[0].pageX
+                });
+            };
+            touchmove = function(e) {
+                mousemove({
+                    preventDefault: e.preventDefault,
+                    clientX: e.originalEvent.changedTouches[0].pageX
+                });
+            };
+            touchend = function(e) {
+                mouseup({
+                    preventDefault: e.preventDefault,
+                    clientX: e.originalEvent.changedTouches[0].pageX
+                });
+            };
+            if (supportsTouch) {
+                $handle.on('touchstart', touchstart);
+            } else {
+                $handle.on('mousedown', mousedown);
+            }
+        }
+    </script>
+</body>
+
+</html>
